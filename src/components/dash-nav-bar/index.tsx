@@ -1,12 +1,11 @@
-import { Box, ButtonBase, Paper, PaperProps, Toolbar, ToolbarProps } from "@mui/material";
+import { Box} from "@mui/material";
 import { BoxProps } from "@mui/system";
 import React from "react";
 import Logo from "./logo";
 import NavLinks from "./nav-links";
 import UserBar from "./user-bar";
 export default function DashboardNavbar(){
-    // const tProps:ToolbarProps = {sx:{bgcolor: 'gray', justifyContent: 'space-between'}}
-    const pProps:BoxProps = {sx: {px: 5, minHeight: "64px", display: 'flex', bgcolor: 'lightgray', justifyContent: 'space-between', alignItems: 'center'}}
+    const pProps:BoxProps = {sx: {px: 5, minHeight: "64px", display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: 1, borderColor: 'primary.light'}}
     return (
         <Box {...pProps}>
             <Logo/>

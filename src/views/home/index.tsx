@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
-import DashboardNavbar from "../../components/dash-nav-bar";
+import StakeMemberTable from "../../components/stake-member-table";
 
 export default function DashboardHome(){
     return (
         <Box>
-            hi
+            <StakeMemberTable title="Ogden YSA 2nd Stake" unitLabel="member" headers={[]}/>
         </Box>
     )
 }

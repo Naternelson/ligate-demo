@@ -1,6 +1,6 @@
 import { ArrowDropDown, NotificationsNone } from "@mui/icons-material";
-import { Badge, BadgeProps, Box, BoxProps, Button, ButtonBase, ButtonProps, Link, Menu, MenuList, MenuListProps, MenuProps, Typography } from "@mui/material";
-import { ReactNode, useRef, useState } from "react";
+import { Badge, BadgeProps, Box, BoxProps, Button, ButtonBase, ButtonProps, Menu, MenuList, MenuListProps, MenuProps, Typography } from "@mui/material";
+import { ReactNode, useState } from "react";
 
 export default function UserBar(){
     const [open, setOpen] = useState(false)
