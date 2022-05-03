@@ -4,7 +4,7 @@ import DashboardNavbar from "../../components/dash-nav-bar";
 export default function DashboardHome(){
     return (
         <Box>
-            <DashboardNavbar/>
+            hi
         </Box>
     )
 }
