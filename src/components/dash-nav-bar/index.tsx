@@ -3,6 +3,7 @@ import { BoxProps } from "@mui/system";
 import React from "react";
 import Logo from "./logo";
 import NavLinks from "./nav-links";
+import UserBar from "./user-bar";
 export default function DashboardNavbar(){
     // const tProps:ToolbarProps = {sx:{bgcolor: 'gray', justifyContent: 'space-between'}}
     const pProps:BoxProps = {sx: {px: 5, minHeight: "64px", display: 'flex', bgcolor: 'lightgray', justifyContent: 'space-between', alignItems: 'center'}}
@@ -10,9 +11,7 @@ export default function DashboardNavbar(){
         <Box {...pProps}>
             <Logo/>
             <NavLinks/>
-            <ButtonBase>
-                Hi
-            </ButtonBase>
+            <UserBar/>
         </Box>
     )
 }
