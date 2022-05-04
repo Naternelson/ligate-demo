@@ -7,7 +7,7 @@ export default function Logo(){
     const logoButtonProps:ButtonBaseProps = {onClick: to("/"), disableRipple:true}
     return (
         <ButtonBase {...logoButtonProps}>
-            <Typography>LIGATE</Typography>
+            <Typography variant="button" sx={{fontSize: "24px"}}>LIGATE</Typography>
         </ButtonBase>
     )
 }

@@ -5,6 +5,7 @@ import DashboardNavbar from "../components/dash-nav-bar";
 import ProfilePage from "../views/profile";
 import { Box, BoxProps } from "@mui/material";
 import ReportsView from "../views/reports";
+import SplashPage from "../views/splash";
 
 export default function AppRouter(){
     const boxProps:BoxProps = {display: 'flex', flexDirection: 'column', height: '100vh', maxHeight: '100vh'}
@@ -16,6 +17,7 @@ export default function AppRouter(){
                     <Route path="/" element={<DashboardHome/>}/>
                     <Route path="/profile" element={<ProfilePage/>}/>
                     <Route path="/reports" element={<ReportsView/>}/>
+                    <Route path="/splash" element={<SplashPage/>}/>
                 </Routes>
             </Box>
            

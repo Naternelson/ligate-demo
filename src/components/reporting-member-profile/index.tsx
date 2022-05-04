@@ -30,7 +30,7 @@ export default function MemberSidebar(){
                     <Typography variant="overline" align="center" sx={{textAlign:'center', width: '100%'}}>history</Typography>
                     <Divider/>
                 </Box>
-                <List>
+                <List sx={{ flex:1, height: "200px", overflowY:'auto'}}>
                     <ListItem alignItems="flex-start" sx={{gap:1, flexDirection:'column'}}>
                         <Typography sx={{color: 'grey.600', fontStyle:"italic", fontSize: '12px', lineHeight:1}}>
                             Anthony received a new calling
@@ -49,7 +49,7 @@ export default function MemberSidebar(){
                     </ListItem>
                     <ListItem alignItems="flex-start" sx={{gap:1, flexDirection:'column'}}>
                         <Typography sx={{color: 'grey.600', fontStyle:"italic", fontWeight:'bold', fontSize: '12px', lineHeight:1}}>
-                            Anthony's status changed from unknown to Active
+                            Anthony's status changed from Unknown to Active
                         </Typography>
                         <Typography sx={{color: 'grey.600', fontStyle:"italic", fontSize: '10px',lineHeight:0.5}}>
                             @{new Date().toLocaleString()}
