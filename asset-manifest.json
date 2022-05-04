@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Naternelson/ligate-demo/static/css/main.a53d81f6.css",
+    "main.js": "/Naternelson/ligate-demo/static/js/main.0add4088.js",
+    "static/js/787.9732c604.chunk.js": "/Naternelson/ligate-demo/static/js/787.9732c604.chunk.js",
+    "index.html": "/Naternelson/ligate-demo/index.html",
+    "main.a53d81f6.css.map": "/Naternelson/ligate-demo/static/css/main.a53d81f6.css.map",
+    "main.0add4088.js.map": "/Naternelson/ligate-demo/static/js/main.0add4088.js.map",
+    "787.9732c604.chunk.js.map": "/Naternelson/ligate-demo/static/js/787.9732c604.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a53d81f6.css",
+    "static/js/main.0add4088.js"
+  ]
+}
