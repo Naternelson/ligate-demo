@@ -4,6 +4,7 @@ import React from "react"
 import DashboardNavbar from "../components/dash-nav-bar";
 import ProfilePage from "../views/profile";
 import { Box, BoxProps } from "@mui/material";
+import ReportsView from "../views/reports";
 
 export default function AppRouter(){
     const boxProps:BoxProps = {display: 'flex', flexDirection: 'column', height: '100vh', maxHeight: '100vh'}
@@ -14,13 +15,8 @@ export default function AppRouter(){
                 <Routes>
                     <Route path="/" element={<DashboardHome/>}/>
                     <Route path="/profile" element={<ProfilePage/>}/>
+                    <Route path="/reports" element={<ReportsView/>}/>
                 </Routes>
-            <footer>
-                <Box sx={{textAlign:'center'}}>
-                    Copyright Ligate llc
-                </Box>
-                
-            </footer>
             </Box>
            
             

@@ -3,11 +3,12 @@ import { useLocation } from "react-router-dom";
 import { useNavigator } from "../navigation";
 
 export default function NavLinks(){
-    const boxProps:BoxProps = {display:'flex', flexDirection:'row', height: "64px"}
+    const boxProps:BoxProps = {display:'flex', flexDirection:'row', height: "64px", flex:1, justifyContent:'center'}
     return (
         <Box {...boxProps}>
             <NavLink label="Members" location="/"/>
             <NavLink label="Reports" location="/reports"/>
+            <NavLink label="Profile" location="/profile"/>
         </Box>
     )
 }
