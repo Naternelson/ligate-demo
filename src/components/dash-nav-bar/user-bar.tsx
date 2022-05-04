@@ -1,8 +1,10 @@
 import { ArrowDropDown, NotificationsNone } from "@mui/icons-material";
 import { Badge, BadgeProps, Box, BoxProps, Button, ButtonBase, ButtonProps, Menu, MenuList, MenuListProps, MenuProps, Typography } from "@mui/material";
 import { ReactNode, useState } from "react";
+import { useNavigator } from "../navigation";
 
 export default function UserBar(){
+    const [to] = useNavigator()
     const [open, setOpen] = useState(false)
     const [anchorEl, setAnchorEl] = useState<any>(null)
     const onClick = (e:any) => {
@@ -44,7 +46,10 @@ export default function UserBar(){
             </Button>
             <Menu {...menuProps}>
                 <MenuList {...menuList}>
-                    <ButtonBase sx={{p:1, width: "inherit"}} disableRipple>
+                    <ButtonBase onClick={() => {
+                        to("/profile")()
+                        onClose()} } 
+                        sx={{p:1, width: "inherit"}} disableRipple>
                         <Typography variant="body2">Edit Profile </Typography>
                     </ButtonBase>
                 </MenuList>

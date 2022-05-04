@@ -1,10 +1,10 @@
 import { ThemeProvider } from '@mui/material/styles';
 import React from 'react';
 import AppRouter from './router';
-import mainTheme from "./themes/main"
+import main from './themes/main';
 function App() {
   return (
-    <ThemeProvider theme={mainTheme}>
+    <ThemeProvider theme={main}>
       <AppRouter/>
     </ThemeProvider>
 
