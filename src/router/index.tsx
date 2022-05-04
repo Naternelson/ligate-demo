@@ -6,7 +6,7 @@ import ProfilePage from "../views/profile";
 import { Box, BoxProps } from "@mui/material";
 
 export default function AppRouter(){
-    const boxProps:BoxProps = {display: 'flex', flexDirection: 'column', height: '100vh'}
+    const boxProps:BoxProps = {display: 'flex', flexDirection: 'column', height: '100vh', maxHeight: '100vh'}
     return (
         <BrowserRouter>
             <Box {...boxProps}>
@@ -15,9 +15,15 @@ export default function AppRouter(){
                     <Route path="/" element={<DashboardHome/>}/>
                     <Route path="/profile" element={<ProfilePage/>}/>
                 </Routes>
+            <footer>
+                <Box sx={{textAlign:'center'}}>
+                    Copyright Ligate llc
+                </Box>
+                
+            </footer>
             </Box>
            
-
+            
         </BrowserRouter>
     )
 }
