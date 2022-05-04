@@ -1,5 +1,6 @@
 import { Box, Paper } from "@mui/material";
 import WardList from "../../components/report-ward-list";
+import DemoReportingTable from "../../components/reportingTable";
 
 export default function ReportsView(){
     return (
@@ -7,8 +8,8 @@ export default function ReportsView(){
             <Paper elevation={5} sx={{height: '100%'}}>
                <WardList/>
             </Paper>
-            <Paper elevation={5} sx={{height: '100%'}}>
-                Hi there
+            <Paper elevation={5} sx={{height: '100%', flex:1}}>
+                <DemoReportingTable/>
             </Paper>
         </Box>
     )

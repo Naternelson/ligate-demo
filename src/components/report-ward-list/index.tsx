@@ -22,11 +22,11 @@ export default function WardList(){
             <Box {...boxProps}>
                 <Typography variant='h6' sx={{color: 'grey.700'}}>Stakes</Typography>
                 <Button {...buttonProps}>Add</Button>
-                <Divider/>
             </Box>
+            <Divider/>
             <List dense={true}>
                 <ListItemButton selected={true}>
-                    <Typography variant="caption" sx={{color: 'grey.700'}}>Salt Lake City 2nd Stake </Typography>
+                    <Typography variant="caption" sx={{color: 'grey.700', fontWeight: 'bold'}}>Salt Lake City 2nd Stake </Typography>
                     <ArrowRight fontSize="small" sx={{color: 'grey.600'}}/>
                 </ListItemButton>
                 <StakeListItems/>

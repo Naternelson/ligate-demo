@@ -3,7 +3,7 @@ import { Checkbox, TableCell, TableHead, TableRow } from "@mui/material";
 export default function DemoHeader(){
     return (
         <TableHead>
-            <TableRow>
+            <TableRow sx={{bgcolor: "#e6eef0"}}>
                 <SelectBox/>
                 <TableCell padding="normal" align='left'>
                     Name

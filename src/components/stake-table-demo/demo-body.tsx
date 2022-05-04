@@ -1,9 +1,13 @@
 import { Box, Checkbox, IconButton, TableBody, TableCell, TableRow, Tooltip } from "@mui/material";
 import { faker } from "@faker-js/faker";
 import { Check, Delete, Edit, Error, QuestionMark } from "@mui/icons-material";
-export default function DemoBody(){
+import { ReactNode, useEffect, useState } from "react";
+interface BodyProps{
+    count: number
+}
+export default function DemoBody(props:BodyProps){
     const arr:number[] = []
-    for(let i = 0; i < 100;i++) {
+    for(let i = 0; i < props.count; i++) {
         arr.push(i)
     }
     return (
@@ -16,19 +20,28 @@ export default function DemoBody(){
 }
 
 export function DemoRow(){
-    const rndValue = Math.floor(Math.random() * 3)
+    const [name, setName] = useState<string>("")
+    const [ward, setWard] = useState<string>("")
+    const [age, setAge] = useState<string>("")
+    const [activity] = useState<number>(Math.floor(Math.random() * 3))
+    useEffect(()=>{
+        setName([faker.name.firstName(), faker.name.lastName()].join(" "))
+        setWard([faker.address.cityName(),faker.random.numeric(1) , "Ward"].join(" "))
+        setAge([faker.random.numeric(2)].join(" ")) 
+
+    },[])
     return (
         <TableRow hover={true}>
             <TableCell padding="checkbox" align="center"><Checkbox size={"small"}/></TableCell>
-            <TableCell>{[faker.name.firstName(), faker.name.lastName()].join(" ")}</TableCell>
-            <TableCell>{["Ogden",faker.random.numeric(1) , "Ward"].join(" ")}</TableCell>
-            <TableCell align="right">{[faker.random.numeric(2)].join(" ")}</TableCell>
+            <TableCell>{name}</TableCell>
+            <TableCell>{ward}</TableCell>
+            <TableCell align="right">{age}</TableCell>
             <TableCell padding="checkbox" align="center">
-                <Tooltip title={rndValue === 0 ? "Active" : rndValue === 1 ? "Inactive" : "Unknown"}>
+                <Tooltip title={activity === 0 ? "Active" : activity === 1 ? "Inactive" : "Unknown"}>
                     <Box>
-                        {rndValue === 0 && <Check fontSize="small" color="success"/>}
-                        {rndValue === 1 && <Error fontSize="small" color="warning"/>}
-                        {rndValue === 2 && <QuestionMark fontSize="small" color='disabled'/>}
+                        {activity === 0 && <Check fontSize="small" color="success"/>}
+                        {activity === 1 && <Error fontSize="small" color="warning"/>}
+                        {activity === 2 && <QuestionMark fontSize="small" color='disabled'/>}
                     </Box>
                 </Tooltip>
             </TableCell>

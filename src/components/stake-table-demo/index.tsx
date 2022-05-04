@@ -12,7 +12,7 @@ export default function DemoStakeTable(){
                 <Box sx={{overflow:'auto', flex:1}}>
                     <Table stickyHeader size="small">
                         <DemoHeader/>
-                        <DemoBody/>
+                        <DemoBody count={100}/>
                     </Table>
                 </Box>
             </TableContainer>
