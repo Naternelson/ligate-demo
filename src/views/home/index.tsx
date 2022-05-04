@@ -6,10 +6,11 @@ import { startCase } from "lodash";
 import { CustomCell } from "../../components/stake-table/header";
 import { Check, Delete, Edit, PriorityHigh, Warning } from "@mui/icons-material";
 import DemoStakeTable from "../../components/stake-table-demo";
+import Sidebar from "../../components/sidebar";
 export default function DashboardHome(){
     return (
         <Box height="75%" display="flex" flexDirection="row" gap={2} my={2}>
-            <Paper elevation={5} sx={{p:3}}>Hi</Paper>
+            <Paper elevation={5} sx={{p:2}}><Sidebar/></Paper>
             <Paper elevation={5} sx={{flex:1, p:3, overflow:'hidden'}}>
                 <DemoStakeTable/>
             </Paper>
