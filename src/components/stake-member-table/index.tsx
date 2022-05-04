@@ -1,5 +1,6 @@
 import {Box, Table, TableContainer} from "@mui/material"
 import { createContext, PropsWithChildren, useContext, useEffect, useState} from "react"
+import { useDeepEffect } from "../utilities/useDeepCompareEffect"
 import { TableHeaderBar } from "./table-bar"
 import { TableRowData } from "./table-body"
 import TableHeader, { SortDirection, TableHeaderItem } from "./table-header"
@@ -67,10 +68,9 @@ export default function StakeMemberTable(props:PropsWithChildren<TableProps>){
         })
     },[activeColumn[0]])
 
-    useEffect(()=>{
+    useDeepEffect(() => {
         
-    },[])
-
+    },[rawData[0]])
 
 
     return (
@@ -92,3 +92,13 @@ export function useStakeTableContext(){
     return useContext(Context)
 }
 
+
+
+function headerIndex(headers: TableHeaderItem[], data: {[key:string]: TableRowData}){
+    const ids = headers.map(h => h.id)
+    ids.reduce((obj, id) => {
+        const value = []
+        
+        return {}
+    }, {})
+}

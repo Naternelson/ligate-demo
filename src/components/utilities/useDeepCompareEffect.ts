@@ -1,5 +1,5 @@
 import { isEqual } from "lodash"
-import { useEffect, useRef } from "react"
+import { useCallback, useEffect, useRef } from "react"
 
 function useDeepCompareMemoize(value:any){
     const ref = useRef<any>()
@@ -9,4 +9,8 @@ function useDeepCompareMemoize(value:any){
 
 export function useDeepEffect(effect: React.EffectCallback, dependencies: React.DependencyList){
     useEffect(effect, dependencies.map(useDeepCompareMemoize))
+}
+
+export function useDeepCallback(cb:any, dependencies: React.DependencyList){
+    return useCallback(cb, dependencies.map(useDeepCompareMemoize))
 }
