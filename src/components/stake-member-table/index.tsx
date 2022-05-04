@@ -67,7 +67,11 @@ export default function StakeMemberTable(props:PropsWithChildren<TableProps>){
         })
     },[activeColumn[0]])
 
-    
+    useEffect(()=>{
+        
+    },[])
+
+
 
     return (
         <Context.Provider {...providerProps}>
